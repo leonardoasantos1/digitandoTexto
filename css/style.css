@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #262626;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    border-right: 1px solid rgba(255, 255, 255, 0.75);
+    color: #fff;
+    font-size: 2rem;
+    margin: auto 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.animation {
+    animation: 
+        cursorPiscar 500ms infinite normal, 
+        typePiscar 4s steps(40) 1s normal both;
+}
+
+@keyframes typePiscar {
+    from {
+        width: 0;
+    } to {
+        width: 12em;
+    }
+}
+
+@keyframes cursorPiscar {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    } to {
+        border-right-color: transparent;
+    }
+}
